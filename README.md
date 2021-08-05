@@ -19,9 +19,7 @@ Stylelint - `.stylelintrc.json`
 
 I'd recommend taking the mirroring approach for this repository as it's likely to be reused across multiple projects.
 
-1 - Create a `--bare` clone of this repository 
-
-`git clone --bare https://github.com/SamAlexMunro/AngularHuskyPrettierTemplate.git`
+1 - Create a `--bare` clone of this repository `git clone --bare https://github.com/SamAlexMunro/AngularHuskyPrettierTemplate.git`
 
 2 - Create a new target repository in github and make note of the URL appending `.git` such as `https://github.com/SamAlexMunro/<NewRepoName>.git`
 
