@@ -1,28 +1,25 @@
 # AngularHuskyPrettierTemplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+Template Angular project setup with ESLint, Prettier, Stylelint & testing ran on Husky pre-commit hooks
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm i`
+## Config Files
 
-## Code scaffolding
+Husky hooks - `.husky/pre-commit`
+ESLint - `.eslint.json` - If updating/adding rules place the new rulesets in `"overrides" > "rules"` section
+Prettier - `.prettierrc.json` & `.prettierignore`
+Stylelint - `.stylelintrc.json` 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Cloning 
 
-## Build
+I'd recommend taking the mirroring approach for this repository as it's likely to be reused across multiple projects.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1 - Create a `--bare` clone of this repository `git clone --bare https://github.com/SamAlexMunro/AngularHuskyPrettierTemplate.git`
+2 - Create a new target repository in github and make note of the URL appending `.git` such as `https://github.com/SamAlexMunro/<NewRepoName>.git`
+3 - Change directory in `AngularHuskyPrettierTemplate.git` 
+4 - Run `git push --mirror https://github.com/SamAlexMunro/<NewRepoName>.git`
+5 - You can now optionally remove the `AngularHuskyPrettierTemplate.git` folder or retain it for future use and repeat steps 2 - 4 to make another fresh clone.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# AngularHuskyPrettierTemplate" 
