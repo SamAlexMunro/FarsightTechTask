@@ -1,0 +1,15 @@
+@use '../../scss/base.scss';
+
+:host[app-button] {
+  background-color: map-get(base.$green, 100);
+  border: 2px solid transparent;
+  box-shadow: 0 2px 0 map-get(base.$green, 200);
+  color: map-get(base.$white, 100);
+  font-family: base.$gds-transport;
+  font-size: map-get(base.$font-size, s);
+  padding: 8px 10px 7px;
+
+  &[xl-margin-bottom] {
+    margin-bottom: 32px;
+  }
+}
