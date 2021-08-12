@@ -12,4 +12,9 @@
   &[xl-margin-bottom] {
     margin-bottom: 32px;
   }
+
+  &:focus {
+    outline: 4px solid map-get(base.$yellow, 100);
+    outline-offset: -1px;
+  }
 }

@@ -10,11 +10,6 @@
   width: 100%;
 }
 
-:host {
-  font-family: base.$gds-transport;
-  font-size: map-get(base.$font-size, s);
-}
-
 fieldset {
   border: unset;
 }

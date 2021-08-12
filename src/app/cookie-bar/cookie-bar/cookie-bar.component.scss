@@ -1,10 +1,5 @@
 @use '../../scss/base';
 
-:host {
-  font-family: base.$gds-transport;
-  font-size: map-get(base.$font-size, s);
-}
-
 .background {
   background: map-get(base.$white, 200);
   display: block;

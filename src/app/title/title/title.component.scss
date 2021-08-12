@@ -4,9 +4,16 @@
   color: map-get(base.$black, 200);
   display: block;
   font-family: base.$gds-transport;
-  font-size: map-get(base.$font-size, l);
   font-weight: 700;
   margin-bottom: map-get(base.$spacings, m);
+
+  @include base.breakpoint(600px) {
+    font-size: map-get(base.$font-size, m);
+  }
+
+  @include base.breakpoint(800px) {
+    font-size: map-get(base.$font-size, l);
+  }
 
   &[no-margin-bottom] {
     margin-bottom: unset;

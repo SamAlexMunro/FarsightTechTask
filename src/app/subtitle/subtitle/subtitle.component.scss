@@ -5,7 +5,6 @@
   color: map-get(base.$black, 100);
   display: block;
   font-family: base.$gds-transport;
-  font-size: map-get(base.$font-size, s);
   margin-bottom: map-get(base.$spacings, m);
 
   &[no-margin-bottom] {
