@@ -11,13 +11,28 @@
 
 html,
 body {
+  font-family: base.$gds-transport;
+  font-size: 14px;
   height: 100%;
+  padding: 0 map-get(base.$spacings, l) map-get(base.$spacings, l);
   position: relative;
   width: 100%;
+
+  @include base.breakpoint(600px) {
+    font-size: map-get(base.$font-size, s);
+  }
 }
 
 .title {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: 24px;
+  margin: 32px 0 map-get(base.$spacings, s);
+
+  @include base.breakpoint(600px) {
+    font-size: 32px;
+  }
+
+  @include base.breakpoint(800px) {
+    font-size: 48px;
+  }
 }
