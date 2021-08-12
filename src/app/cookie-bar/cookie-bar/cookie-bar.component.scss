@@ -1,0 +1,29 @@
+@use '../../scss/base';
+
+:host {
+  font-family: base.$gds-transport;
+  font-size: map-get(base.$font-size, s);
+}
+
+.background {
+  background: map-get(base.$white, 200);
+  display: block;
+  padding: map-get(base.$spacings, l) 0;
+  position: relative;
+  width: 100%;
+}
+
+.content {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+}
+
+.description {
+  margin-bottom: map-get(base.$spacings, xs);
+}
+
+.accept-cookies {
+  margin-right: map-get(base.$spacings, s);
+}

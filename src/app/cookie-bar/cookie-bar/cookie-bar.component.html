@@ -1,1 +1,18 @@
-<p>cookie-bar works!</p>
+<div [attr.aria-label]="'Cookies on ' + cookieData.serviceName"
+     *ngIf="cookieData"
+     class="background">
+  <div class="content">
+    <h1 [title]="cookieData.title" app-title></h1>
+    <p class="description">{{cookieData.description}}</p>
+    <div class="buttons">
+      <button (click)="acceptedCookies.emit()"
+              app-button
+              class="accept-cookies">
+        Accept analytics cookies
+      </button>
+      <button (click)="declinedCookies.emit()" app-button>
+        Reject analytics cookies
+      </button>
+    </div>
+  </div>
+</div>
