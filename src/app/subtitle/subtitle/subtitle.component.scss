@@ -1,6 +1,7 @@
 @use '../../scss/base.scss';
 
-:host {
+:host,
+:host[app-subtitle] {
   color: map-get(base.$black, 100);
   display: block;
   font-family: base.$gds-transport;
