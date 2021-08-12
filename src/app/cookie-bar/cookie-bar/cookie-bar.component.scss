@@ -19,6 +19,18 @@
   margin-bottom: map-get(base.$spacings, xs);
 }
 
+button {
+  width: 100%;
+
+  @include base.breakpoint(512px) {
+    width: fit-content;
+  }
+}
+
 .accept-cookies {
-  margin-right: map-get(base.$spacings, s);
+  margin-bottom: map-get(base.$spacings, xs);
+
+  @include base.breakpoint(512px) {
+    margin-right: map-get(base.$spacings, s);
+  }
 }
