@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -6,4 +6,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./title.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TitleComponent {}
+export class TitleComponent {
+  @Input() title?: string;
+
+  constructor() {
+    if (!this.title) console.error('Please provide a title @Input');
+  }
+}

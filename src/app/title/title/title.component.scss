@@ -1,0 +1,12 @@
+@use '../../scss/base.scss';
+
+:host {
+  font-family: base.$gds-transport;
+  font-size: map-get(base.$font-size, l);
+  font-weight: 700;
+  margin-bottom: map-get(base.$spacings, m);
+
+  &[no-margin-bottom] {
+    margin-bottom: unset;
+  }
+}
