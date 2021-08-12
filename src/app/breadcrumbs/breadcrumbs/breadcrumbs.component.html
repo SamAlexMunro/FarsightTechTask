@@ -1,1 +1,11 @@
-<p>breadcrumbs works!</p>
+<ol *ngFor="let crumb of breadcrumbs; let i = index">
+  <li class="breadcrumb">
+    <a [attr.routerLink]="crumb.url">{{ crumb.label }}</a>
+    <img
+      *ngIf="i < breadcrumbs!.length - 1"
+      alt
+      class="chevron"
+      src="assets/chevron-right.svg"
+    />
+  </li>
+</ol>

@@ -1,0 +1,27 @@
+@use '../../scss/base.scss';
+
+:host {
+  align-items: center;
+  display: flex;
+  font-family: base.$gds-transport;
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  align-items: center;
+  display: flex;
+}
+
+.chevron {
+  height: 22px;
+  margin: 0 2px;
+  width: 22px;
+}
