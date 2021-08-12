@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 export interface Breadcrumb {
   url: string;
@@ -10,10 +15,10 @@ export interface Breadcrumb {
   styleUrls: ['./breadcrumbs.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BreadcrumbsComponent {
+export class BreadcrumbsComponent implements OnInit {
   @Input() breadcrumbs?: Breadcrumb[];
 
-  constructor() {
+  ngOnInit() {
     if (!this.breadcrumbs) console.error('Please add breadcrumbs @Input()');
   }
 }
