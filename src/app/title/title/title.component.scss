@@ -10,4 +10,8 @@
   &[no-margin-bottom] {
     margin-bottom: unset;
   }
+
+  &[with-subtitle] {
+    margin-bottom: map-get(base.$spacings, s);
+  }
 }
