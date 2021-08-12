@@ -1,13 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>AngularHuskyPrettierTemplate</title>
-  <base href="/" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="favicon.ico" rel="icon" type="image/x-icon" />
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularHuskyPrettierTemplate</title>
+    <base href="/" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="./assets/all.js"></script>
+  </head>
+  <body>
+    <app-root></app-root>
+    <script>
+      document.body.className = document.body.className
+        ? document.body.className + " js-enabled"
+        : "js-enabled";
+    </script>
+  </body>
 </html>
