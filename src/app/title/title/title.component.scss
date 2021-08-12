@@ -1,6 +1,7 @@
 @use '../../scss/base.scss';
 
 :host {
+  display: block;
   font-family: base.$gds-transport;
   font-size: map-get(base.$font-size, l);
   font-weight: 700;
