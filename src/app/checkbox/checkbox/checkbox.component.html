@@ -1,6 +1,6 @@
 <h1 [title]="'Which types of waste do you transport?'" app-title with-subtitle>
 </h1>
-<app-subtitle [subtitle]="'Select all that apply.'"></app-subtitle>
+<label [subtitle]="'Select all that apply.'" app-subtitle></label>
 <fieldset>
   <div *ngFor="let checkbox of checkboxes" class="checkbox-row">
     <input [id]="checkbox.id"
