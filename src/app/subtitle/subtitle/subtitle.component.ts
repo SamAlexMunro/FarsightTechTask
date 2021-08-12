@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-subtitle',
@@ -6,4 +6,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./subtitle.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SubtitleComponent {}
+export class SubtitleComponent {
+  @Input() subtitle?: string;
+
+  constructor() {
+    if (!this.subtitle) console.error('Please provide a subtitle @Input()');
+  }
+}
