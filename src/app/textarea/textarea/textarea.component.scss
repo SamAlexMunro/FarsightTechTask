@@ -1,0 +1,15 @@
+@use '../../scss/base';
+
+textarea {
+  border: 2px solid map-get(base.$black, 200);
+  margin-bottom: map-get(base.$spacings, xs);
+  padding: map-get(base.$spacings, s);
+  resize: vertical;
+  width: 100%;
+
+  &:focus {
+    border-width: 5px;
+    outline: 4px solid map-get(base.$yellow, 100);
+    outline-offset: -1px;
+  }
+}

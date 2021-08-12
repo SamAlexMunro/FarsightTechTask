@@ -1,1 +1,14 @@
-<p>textarea works!</p>
+<h1 [title]="'Can you provide more detail?'" app-title></h1>
+<label [subtitle]="'Do not include personal or financial information like your National Insurance number or credit card details.'"
+       app-subtitle>
+</label>
+<textarea (keyup)="updateRemainingCharacters(textarea.value)"
+          [attr.maxlength]="characterLimit"
+          #textarea
+          cols="30"
+          id
+          name
+          rows="7">
+</textarea>
+<app-subtitle [subtitle]="'You can enter up to ' + remainingCharacters + ' characters'">
+</app-subtitle>

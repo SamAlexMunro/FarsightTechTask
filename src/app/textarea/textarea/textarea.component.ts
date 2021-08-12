@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-textarea',
@@ -6,4 +6,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./textarea.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TextareaComponent {}
+export class TextareaComponent {
+  @Input() characterLimit = 200;
+  remainingCharacters = this.characterLimit;
+
+  updateRemainingCharacters(textareaValue: string): void {
+    this.remainingCharacters = this.characterLimit - textareaValue.length;
+  }
+}
