@@ -1,7 +1,14 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-title',
+  selector: `
+    h1[app-title],
+    h2[app-title],
+    h3[app-title],
+    h4[app-title],
+    h5[app-title],
+    h6[app-title],
+  `,
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
