@@ -1,0 +1,53 @@
+@use '../../scss/base.scss';
+
+@mixin checkbox-border($width: 2px) {
+  border: $width solid black;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+:host {
+  font-family: base.$gds-transport;
+  font-size: map-get(base.$font-size, s);
+}
+
+fieldset {
+  border: unset;
+}
+
+.checkbox-row {
+  align-items: center;
+  display: flex;
+  margin-bottom: map-get(base.$spacings, s);
+
+  &:last-of-type {
+    margin-bottom: unset;
+  }
+}
+
+.checkbox {
+  height: 44px;
+  position: relative;
+  width: 44px;
+
+  &::before {
+    @include checkbox-border();
+  }
+
+  &:focus {
+    outline: 4px solid map-get(base.$yellow, 100);
+    outline-offset: -1px;
+
+    &::before {
+      @include checkbox-border(4px);
+    }
+  }
+}
+
+.label {
+  padding-left: map-get(base.$spacings, m);
+}

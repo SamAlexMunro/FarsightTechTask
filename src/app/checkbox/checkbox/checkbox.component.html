@@ -1,1 +1,13 @@
-<p>checkbox works!</p>
+<h1 [title]="'Which types of waste do you transport?'" app-title with-subtitle>
+</h1>
+<app-subtitle [subtitle]="'Select all that apply.'"></app-subtitle>
+<fieldset>
+  <div *ngFor="let checkbox of checkboxes" class="checkbox-row">
+    <input [id]="checkbox.id"
+           [name]="checkbox.name"
+           [value]="checkbox.value"
+           class="checkbox"
+           type="checkbox" />
+    <label [for]="checkbox.name" class="label">{{ checkbox.label }}</label>
+  </div>
+</fieldset>
